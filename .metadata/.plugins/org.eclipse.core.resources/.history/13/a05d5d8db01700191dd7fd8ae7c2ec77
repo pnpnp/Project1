@@ -1,0 +1,13 @@
+package com.lti.service;
+
+import com.lti.model.Customer;
+
+public class CustomerServiceImpl implements ICustomerService {
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

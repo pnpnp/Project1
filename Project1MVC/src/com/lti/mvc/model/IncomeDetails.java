@@ -1,0 +1,124 @@
+package com.lti.mvc.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="IncomeDetails")
+public class IncomeDetails {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="incomeDetailsId")
+	private int incomeDetailsId;
+	
+	
+	public IncomeDetails() {
+		super();
+	}
+
+	
+	
+	@Column(name="propertyLocation")
+	private String propertyLocation;
+	
+	@Column(name="propertyName")
+	private String propertyName;
+	
+	@Column(name="estimatedAmount")
+	private int EstimatedAmount;
+	
+	@Column(name="retirementAge")
+	private int retirementAge;
+	
+	@Column(name="organizationType")
+	private String OrganizationType;
+	
+	@Column(name="propertlocation")
+	private String EmployeerName;
+	
+	@Column(name="typeofEmployee")
+	private TypeOfEmployee typeOfEmployee;
+
+
+	public int getIncomeDetailsId() {
+		return incomeDetailsId;
+	}
+
+	public void setIncomeDetailsId(int incomeDetailsId) {
+		this.incomeDetailsId = incomeDetailsId;
+	}
+
+	public String getPropertyLocation() {
+		return propertyLocation;
+	}
+
+	public void setPropertyLocation(String propertyLocation) {
+		this.propertyLocation = propertyLocation;
+	}
+
+	public String getPropertyName() {
+		return propertyName;
+	}
+
+	public void setPropertyName(String propertyName) {
+		this.propertyName = propertyName;
+	}
+
+	public int getEstimatedAmount() {
+		return EstimatedAmount;
+	}
+
+	public void setEstimatedAmount(int estimatedAmount) {
+		EstimatedAmount = estimatedAmount;
+	}
+
+	public int getRetirementAge() {
+		return retirementAge;
+	}
+
+	public void setRetirementAge(int retirementAge) {
+		this.retirementAge = retirementAge;
+	}
+
+	public String getOrganizationType() {
+		return OrganizationType;
+	}
+
+	public void setOrganizationType(String organizationType) {
+		OrganizationType = organizationType;
+	}
+
+	public String getEmployeerName() {
+		return EmployeerName;
+	}
+
+	public void setEmployeerName(String employeerName) {
+		EmployeerName = employeerName;
+	}
+
+	public TypeOfEmployee getTypeOfEmployee() {
+		return typeOfEmployee;
+	}
+
+	public void setTypeOfEmployee(TypeOfEmployee typeOfEmployee) {
+		this.typeOfEmployee = typeOfEmployee;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "IncomeDetails [incomeDetailsId=" + incomeDetailsId + ", propertyLocation=" + propertyLocation
+				+ ", propertyName=" + propertyName + ", EstimatedAmount=" + EstimatedAmount + ", retirementAge="
+				+ retirementAge + ", OrganizationType=" + OrganizationType + ", EmployeerName=" + EmployeerName
+				+ ", typeOfEmployee=" + typeOfEmployee + "]";
+	}
+	
+	
+
+}

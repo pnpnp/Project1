@@ -1,0 +1,126 @@
+package com.lti.mvc.model;
+
+
+import java.sql.Date;
+
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+
+
+@Entity
+public class User{
+	public User() {
+		super();
+	}
+
+	
+	
+	private int phoneNumber;
+	
+	
+   private 	String Gender;
+	
+	
+	private String Country;
+	
+	
+	private String Address;
+  
+	@Column(name="Aadhar", nullable = false)
+	private int Aadhar;
+  
+	@Column(name="dateOfBirth", nullable = false)
+	private Date dateOfBirth;
+	
+	@Id
+	
+	private String emailId;
+	
+	@Column(name="password", nullable = false)
+	private String password;
+	
+
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public String getCountry() {
+		return Country;
+	}
+
+	public void setCountry(String country) {
+		Country = country;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+
+	public int getAadhar() {
+		return Aadhar;
+	}
+
+	public void setAadhar(int aadhar) {
+		Aadhar = aadhar;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [phoneNumber=" + phoneNumber + ", Gender=" + Gender + ", Country=" + Country + ", Address="
+				+ Address + ", Aadhar=" + Aadhar + ", dateOfBirth=" + dateOfBirth + ", emailId=" + emailId
+				+ ", password=" + password + "]";
+	}
+
+	
+
+
+
+	
+	
+	
+}

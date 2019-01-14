@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Jan 13 17:57:46 IST 2019
+org.eclipse.jst.jee.server\:/binary\:D\:\\Javaworkspace\\CopySpringHibernateMVC\\WebContent\\WEB-INF\\lib\\spring-web-4.0.3.RELEASE.jar=WEB-INF/lib/spring-web-4.0.3.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Javaworkspace\\SpringHibernateMVC\\WebContent\\WEB-INF\\lib\\spring-web-4.0.3.RELEASE.jar=WEB-INF/lib/spring-web-4.0.3.RELEASE.jar

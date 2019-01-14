@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;person.sql&apos; to &apos;DemoSprinMVC&apos;" description="Move &apos;person.sql&apos; to &apos;DemoSprinMVC&apos;" destination="/DemoSprinMVC" element1="WebContent/person.sql" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1547379049691" updateReferences="true"/>
+</session>

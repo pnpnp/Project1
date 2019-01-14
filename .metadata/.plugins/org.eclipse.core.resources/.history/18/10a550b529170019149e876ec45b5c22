@@ -1,0 +1,5 @@
+package com.lnt.mvc.Dao;
+
+public interface ICustomerDao {
+
+}

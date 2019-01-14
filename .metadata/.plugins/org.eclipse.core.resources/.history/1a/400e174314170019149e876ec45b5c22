@@ -1,0 +1,39 @@
+package com.lti.dao;
+
+import java.util.List;
+
+import com.lti.model.Customer;
+
+public class CustomerDaoImpl implements ICustomerDao {
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Customer> listCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerById(String emailId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeCustomer(String emailId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

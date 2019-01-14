@@ -1,0 +1,40 @@
+package com.lti.mvc.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="BankDocs")
+public class BankDocuments {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="bankDocumentsId")
+	private int bankDocumentsId;
+	
+	public BankDocuments() {
+		super();
+	}
+	public BankDocuments(String panCard, String aadharCard, int voterid) {
+		super();
+		this.panCard = panCard;
+		this.aadharCard = aadharCard;
+		Voterid = voterid;
+	}
+	@	Column(name="panCard")
+	private String panCard;
+	
+	@	Column(name="aadharCard")
+	private String aadharCard;
+	
+	@	Column(name="Voterid")
+	private int Voterid;
+
+
+	
+	
+}

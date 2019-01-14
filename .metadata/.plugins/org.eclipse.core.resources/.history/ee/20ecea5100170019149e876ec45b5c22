@@ -1,0 +1,60 @@
+package com.lti.mvc.controller;
+
+
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.lti.mvc.exception.CustomException;
+
+import com.lti.mvc.service.IUserService;
+
+@Controller
+public class UserController {
+
+	private IUserService user;
+
+	@Autowired
+	public void setUser(IUserService user) {
+		this.user = user;
+	}
+	
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public String User(Model model) {
+		System.out.println("inside User");
+		model.addAttribute("user", new com.lti.mvc.model.User());// model
+		model.addAttribute("listUser", this.user.listUser());
+		return "user";// view name
+	}
+
+	
+	@RequestMapping(value = "/user/add", method = RequestMethod.POST)
+	@ExceptionHandler({ CustomException.class })
+	public String addUser(@ModelAttribute("user") @Valid com.lti.mvc.model.User u, BindingResult result, Model model) {
+		
+		System.out.println("inside User model");
+		if (!result.hasErrors()) {
+			if (u.getEmailId() == null) {
+				// new person, add it
+				 this.user.addUser(u);
+			} else {
+				// existing person, call update
+				this.user.updateUser(u);
+			}
+			return "redirect:/user";
+		}
+		model.addAttribute("listUser", this.user.listUser());
+		return "user";
+
+	}
+	
+	
+}

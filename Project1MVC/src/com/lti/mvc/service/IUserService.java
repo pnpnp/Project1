@@ -1,0 +1,16 @@
+package com.lti.mvc.service;
+
+import java.util.List;
+
+import com.lti.mvc.model.User;
+
+public interface IUserService {
+
+	public void createUser(User user);
+	
+	public void updateUser(User user);
+	
+	List<User> listUser();
+	
+	public void addUser(User user);
+}

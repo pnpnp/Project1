@@ -1,0 +1,36 @@
+package com.lti.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.lti.mvc.exception.CustomException;
+import com.lti.mvc.service.IPersonService;
+import com.lti.service.ICustomerService;
+
+@Controller
+public class CustomerController {
+
+	private ICustomerService customerService;
+
+	@Autowired
+	@Qualifier(value = "customerService")
+	public void setPersonService(ICustomerService cs) {
+		this.customerService = cs;
+	}
+	
+	@ExceptionHandler(CustomException.class)
+	public ModelAndView handlePersonNotFoundException(CustomException ex) {
+		Map<String, CustomException> model = new HashMap<String, CustomException>();
+		model.put("exception", ex);
+		return new ModelAndView("error", model);
+
+	}
+	
+	
+}

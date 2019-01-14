@@ -1,0 +1,59 @@
+package com.lti.mvc.model;
+
+import java.sql.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="User")
+
+public class User {
+	public User() {
+		super();
+	}
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@Column(name="name", nullable = false) //it is object so nullable?
+	private Name name;
+	
+	@Column(name="phoneNumber", nullable = false)
+	private int phoneNumber;
+	
+	@Column(name="Gender")
+   private 	String Gender;
+	
+	@Column(name="Country", nullable = false)
+	private String Country;
+	
+	@Column(name="Address", nullable = false)
+	private String Address;
+  
+	@Column(name="Aadhar", nullable = false)
+	private int Aadhar;
+  
+	@Column(name="dateOfBirth", nullable = false)
+	private Date dateOfBirth;
+	
+	@PrimaryKeyJoinColumn
+	@Column(name = "emailId", nullable = false)
+	private String emailId;
+	
+	@Column(name="password", nullable = false)
+	private String password;
+	
+	@Column(name="loanDetails")
+	private LoanDetails loanDetails;
+	
+	private 
+	
+	
+}

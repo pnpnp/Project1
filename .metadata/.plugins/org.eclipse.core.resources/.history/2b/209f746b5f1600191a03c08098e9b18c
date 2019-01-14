@@ -1,0 +1,147 @@
+package com.lti.mvc.model;
+
+import java.io.Serializable;
+import java.sql.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+
+
+@Entity
+@Table(name="User")
+public class User implements Serializable{
+	public User() {
+		super();
+	}
+	
+
+	@Column(name="name", nullable = false) //it is object so nullable?
+	private Name name;
+	
+	@Column(name="phoneNumber", nullable = false)
+	private int phoneNumber;
+	
+	@Column(name="Gender")
+   private 	String Gender;
+	
+	@Column(name="Country", nullable = false)
+	private String Country;
+	
+	@Column(name="Address", nullable = false)
+	private String Address;
+  
+	@Column(name="Aadhar", nullable = false)
+	private int Aadhar;
+  
+	@Column(name="dateOfBirth", nullable = false)
+	private Date dateOfBirth;
+	
+	@Id
+	@Column(name = "emailId", nullable = false)
+	private String emailId;
+	
+	@Column(name="password", nullable = false)
+	private String password;
+	
+	@Column(name="loanDetails")
+	private LoanDetails loanDetails;
+
+	public Name getName() {
+		return name;
+	}
+
+	public void setName(Name name) {
+		this.name = name;
+	}
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public String getCountry() {
+		return Country;
+	}
+
+	public void setCountry(String country) {
+		Country = country;
+	}
+
+	public String getAddress() {
+		return Address;
+	}
+
+	public void setAddress(String address) {
+		Address = address;
+	}
+
+	public int getAadhar() {
+		return Aadhar;
+	}
+
+	public void setAadhar(int aadhar) {
+		Aadhar = aadhar;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public LoanDetails getLoanDetails() {
+		return loanDetails;
+	}
+
+	public void setLoanDetails(LoanDetails loanDetails) {
+		this.loanDetails = loanDetails;
+	}
+
+	@Override
+	public String toString() {
+		return "User [name=" + name + ", phoneNumber=" + phoneNumber + ", Gender=" + Gender + ", Country=" + Country
+				+ ", Address=" + Address + ", Aadhar=" + Aadhar + ", dateOfBirth=" + dateOfBirth + ", emailId="
+				+ emailId + ", password=" + password + ", loanDetails=" + loanDetails + "]";
+	}
+
+
+	
+	
+	
+}

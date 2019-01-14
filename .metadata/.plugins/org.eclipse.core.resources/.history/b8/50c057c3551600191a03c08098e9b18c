@@ -1,0 +1,5 @@
+package com.lti.mvc.service;
+
+public interface IUserService {
+
+}

@@ -1,0 +1,5 @@
+package com.lti.mvc.dao;
+
+public interface IUserDao {
+
+}

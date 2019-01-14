@@ -1,0 +1,13 @@
+package com.lti.dao;
+
+import com.lti.model.Customer;
+
+public class CustomerDaoImpl implements ICustomerDao {
+
+	@Override
+	public void addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

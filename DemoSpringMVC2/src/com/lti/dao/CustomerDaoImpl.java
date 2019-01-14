@@ -1,0 +1,46 @@
+package com.lti.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.lti.model.Customer;
+
+@Transactional
+@Repository
+public class CustomerDaoImpl implements ICustomerDao {
+
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+	
+	
+	private static final Logger logger = 			
+			LoggerFactory.getLogger(CustomerDaoImpl.class);
+	
+	
+	@Override
+	public void addCustomer(Customer customer) {
+		Session session = this.sessionFactory.openSession();
+		Transaction tx=session.beginTransaction();
+		session.save(customer);
+		logger.info("Employee details saved successfully as: "+customer);
+		tx.commit();
+		//session.close();
+		
+	
+		
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.lti.mvc.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.lti.mvc.dao.IUserDao;
+import com.lti.mvc.model.User;
+
+
+@Service
+public class UserServiceImpl implements IUserService {
+	private IUserDao user;
+	
+	@Override
+	public void createUser(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateUser(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<User> listUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

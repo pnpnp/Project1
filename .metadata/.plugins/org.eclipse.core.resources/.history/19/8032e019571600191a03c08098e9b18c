@@ -1,0 +1,21 @@
+package com.lti.mvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.lti.mvc.service.IEmployeeService;
+import com.lti.mvc.service.IUserService;
+
+@Controller
+public class UserController {
+
+	private IUserService user;
+
+	@Autowired
+	public void setUser(IUserService user) {
+		this.user = user;
+	}
+	
+	
+	
+}

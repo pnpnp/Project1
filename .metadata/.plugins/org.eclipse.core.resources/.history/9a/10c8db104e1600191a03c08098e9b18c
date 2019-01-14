@@ -1,0 +1,50 @@
+package com.lti.mvc.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="IncomeDetails")
+public class IncomeDetails {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="incomeDetailsId")
+	private int incomeDetailsId;
+	
+	
+	public IncomeDetails() {
+		super();
+	}
+
+	
+	
+	@Column(name="propertyLocation")
+	private String propertyLocation;
+	
+	@Column(name="propertyName")
+	private String propertyName;
+	
+	@Column(name="estimatedAmount")
+	private int EstimatedAmount;
+	
+	@Column(name="retirementAge")
+	private int retirementAge;
+	
+	@Column(name="organizationType")
+	private String OrganizationType;
+	
+	@Column(name="propertlocation")
+	private String EmployeerName;
+	
+	@Column(name="typeofEmployee")
+	private TypeOfEmployee typeOfEmployee;
+	
+	
+
+}

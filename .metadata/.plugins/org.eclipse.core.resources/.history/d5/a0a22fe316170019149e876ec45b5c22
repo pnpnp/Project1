@@ -1,0 +1,21 @@
+package com.lti.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+
+import com.lti.mvc.service.IPersonService;
+import com.lti.service.ICustomerService;
+
+@Controller
+public class CustomerController {
+
+	private ICustomerService customerService;
+
+	@Autowired
+	@Qualifier(value = "customerService")
+	public void setPersonService(ICustomerService cs) {
+		this.customerService = cs;
+	}
+	
+}

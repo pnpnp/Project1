@@ -1,0 +1,51 @@
+package com.lti.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.lti.dao.ICustomerDao;
+import com.lti.model.Customer;
+import com.lti.mvc.dao.IPersonDao;
+
+public class CustomerServiceImpl implements ICustomerService {
+
+	private ICustomerDao customerDao;
+
+	// setter method for personDao
+	@Autowired
+	public void setCustomerDao(ICustomerDao customerDao) {
+		this.customerDao = customerDao;
+	}
+	
+	
+	@Override
+	public void addCustomer(Customer customer) {
+		this.customerDao.addCustomer(customer);
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Customer> listCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerById(String emailId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void removeCustomer(String emailId) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
